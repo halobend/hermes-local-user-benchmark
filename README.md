@@ -5,7 +5,7 @@
 This benchmark was built to measure the kind of agentic work the operator actually delegates, not generic coding puzzles. The design started from reviewed Codex session history on the local host (laptop) and on `desktop-pc`, then distilled the repeated work patterns into two suites:
 
 - an offline fixture suite for repeatable, comparison-friendly testing
-- a live SSH suite for real remote operations on a disposable host
+- a live SSH suite for real remote operations on a disposable host 'linux-host'
 
 The benchmark is meant to answer a practical question: can `hermes` local model profile do the same categories of work the operator already uses Codex for, and can it do that work with reasonable operator discipline?
 
