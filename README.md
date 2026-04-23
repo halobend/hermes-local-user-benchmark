@@ -166,18 +166,18 @@ without taking over the code edits itself.
 
 ## What The Live SSH Tasks Measure
 
-### `claudel_host_probe`
+### `linux-host_host_probe`
 
 This is the simplest live task. It verifies that Hermes can:
 
-- SSH to `claudel`
+- SSH to `linux-host`
 - confirm basic host facts
 - check passwordless sudo with `sudo -n`
 - keep local artifacts local while still writing a remote verification marker
 
 This intentionally catches sloppy local-vs-remote path handling.
 
-### `claudel_repo_fix`
+### `linux-host_repo_fix`
 
 This task seeds a broken disposable repo on `linux-host`, then expects Hermes to:
 
@@ -192,7 +192,7 @@ This task seeds a broken disposable repo on `linux-host`, then expects Hermes to
 
 The grader verifies remote pytest, commit message, remote URL, pushed HEAD equality, README content, and report quality.
 
-### `claudel_service_recovery`
+### `linux-host_service_recovery`
 
 This task installs a deliberately broken systemd service on `linux-host`. Hermes must:
 
@@ -204,7 +204,7 @@ This task installs a deliberately broken systemd service on `linux-host`. Hermes
 
 This measures real SSH/systemd repair behavior.
 
-### `claudel_status_rollout`
+### `linux-host_status_rollout`
 
 This is the hardest live task. It combines code, Git, deployment, and verification. Hermes must:
 
